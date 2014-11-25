@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/zone'
-
 module Fog
   module DNS
     class StormOnDemand

@@ -1,6 +1,11 @@
 module Fog
   module Support
     class StormOnDemand < Fog::Service
+      autoload :Alert, 'fog/support/storm_on_demand/models/alert'
+      autoload :Alerts, 'fog/support/storm_on_demand/models/alerts'
+      autoload :Ticket, 'fog/support/storm_on_demand/models/ticket'
+      autoload :Tickets, 'fog/support/storm_on_demand/models/tickets'
+
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 

@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/storm_on_demand'
-
 module Fog
   module VPN
     class StormOnDemand

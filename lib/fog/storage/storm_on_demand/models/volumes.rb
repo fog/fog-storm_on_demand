@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/volume'
-
 module Fog
   module Storage
     class StormOnDemand

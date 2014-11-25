@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/image'
-
 module Fog
   module Compute
     class StormOnDemand

@@ -1,6 +1,19 @@
 module Fog
   module Compute
     class StormOnDemand < Fog::Service
+      autoload :Config, 'fog/compute/storm_on_demand/models/config'
+      autoload :Configs, 'fog/compute/storm_on_demand/models/configs'
+      autoload :Image, 'fog/compute/storm_on_demand/models/image'
+      autoload :Images, 'fog/compute/storm_on_demand/models/images'
+      autoload :Notification, 'fog/compute/storm_on_demand/models/notification'
+      autoload :Notifications, 'fog/compute/storm_on_demand/models/notifications'
+      autoload :Product, 'fog/compute/storm_on_demand/models/product'
+      autoload :Products, 'fog/compute/storm_on_demand/models/products'
+      autoload :Server, 'fog/compute/storm_on_demand/models/server'
+      autoload :Servers, 'fog/compute/storm_on_demand/models/servers'
+      autoload :Template, 'fog/compute/storm_on_demand/models/template'
+      autoload :Templates, 'fog/compute/storm_on_demand/models/templates'
+
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 

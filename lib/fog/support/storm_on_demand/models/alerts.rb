@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/alert'
-
 module Fog
   module Support
     class StormOnDemand

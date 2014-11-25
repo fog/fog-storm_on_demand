@@ -1,5 +1,3 @@
-require 'fog/account/models/token'
-
 module Fog
   module Account
     class StormOnDemand

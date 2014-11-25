@@ -1,6 +1,13 @@
 module Fog
   module Monitoring
     class StormOnDemand < Fog::Service
+      autoload :Bandwidth, 'fog/monitoring/storm_on_demand/models/bandwidth'
+      autoload :Bandwidths, 'fog/monitoring/storm_on_demand/models/bandwidths'
+      autoload :Load, 'fog/monitoring/storm_on_demand/models/load'
+      autoload :Loads, 'fog/monitoring/storm_on_demand/models/loads'
+      autoload :MonitorService, 'fog/monitoring/storm_on_demand/models/monitor_service'
+      autoload :MonitorServices, 'fog/monitoring/storm_on_demand/models/monitor_services'
+
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 

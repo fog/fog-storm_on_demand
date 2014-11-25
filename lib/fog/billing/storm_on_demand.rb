@@ -1,6 +1,11 @@
 module Fog
   module Billing
     class StormOnDemand < Fog::Service
+      autoload :Invoice, 'fog/billing/storm_on_demand/models/invoice'
+      autoload :Invoices, 'fog/billing/storm_on_demand/models/invoices'
+      autoload :Payment, 'fog/billing/storm_on_demand/models/payment'
+      autoload :Payments, 'fog/billing/storm_on_demand/models/payments'
+
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 

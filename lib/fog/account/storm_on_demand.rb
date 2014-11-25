@@ -1,6 +1,9 @@
 module Fog
   module Account
     class StormOnDemand < Fog::Service
+      autoload :Token, 'fog/account/storm_on_demand/models/token'
+      autoload :Tokens, 'fog/account/storm_on_demand/models/tokens'
+
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 

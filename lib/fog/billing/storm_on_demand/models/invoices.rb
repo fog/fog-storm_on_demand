@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/invoice'
-
 module Fog
   module Billing
     class StormOnDemand

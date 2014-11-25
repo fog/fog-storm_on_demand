@@ -1,6 +1,17 @@
 module Fog
   module Network
     class StormOnDemand < Fog::Service
+      autoload :Balancer, 'fog/network/storm_on_demand/models/balancer'
+      autoload :Balancers, 'fog/network/storm_on_demand/models/balancers'
+      autoload :Firewall, 'fog/network/storm_on_demand/models/firewall'
+      autoload :Firewalls, 'fog/network/storm_on_demand/models/firewalls'
+      autoload :NetworkIp, 'fog/network/storm_on_demand/models/network_ip'
+      autoload :NetworkIps, 'fog/network/storm_on_demand/models/network_ips'
+      autoload :Ruleset, 'fog/network/storm_on_demand/models/ruleset'
+      autoload :Rulesets, 'fog/network/storm_on_demand/models/rulesets'
+      autoload :Zone, 'fog/network/storm_on_demand/models/zone'
+      autoload :Zones, 'fog/network/storm_on_demand/models/zones'
+
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 

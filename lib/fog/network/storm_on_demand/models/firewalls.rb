@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/firewall'
-
 module Fog
   module Network
     class StormOnDemand

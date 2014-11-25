@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/cluster'
-
 module Fog
   module Storage
     class StormOnDemand

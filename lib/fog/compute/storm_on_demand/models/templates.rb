@@ -1,5 +1,3 @@
-require 'fog/storm_on_demand/models/storm_on_demand/template'
-
 module Fog
   module Compute
     class StormOnDemand

@@ -4,6 +4,15 @@ module Fog
       API_URL = 'https://api.stormondemand.com'
       API_VERSION = 'v1'
 
+      autoload :Domain, 'fog/dns/storm_on_demand/models/domain'
+      autoload :Domains, 'fog/dns/storm_on_demand/models/domains'
+      autoload :Record, 'fog/dns/storm_on_demand/models/record'
+      autoload :Records, 'fog/dns/storm_on_demand/models/records'
+      autoload :Reverse, 'fog/dns/storm_on_demand/models/reverse'
+      autoload :Reverses, 'fog/dns/storm_on_demand/models/reverses'
+      autoload :Zone, 'fog/dns/storm_on_demand/models/zone'
+      autoload :Zones, 'fog/dns/storm_on_demand/models/zones'
+
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
