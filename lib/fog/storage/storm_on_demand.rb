@@ -1,9 +1,6 @@
 module Fog
   module Storage
     class StormOnDemand < Fog::Service
-      API_URL = 'https://api.stormondemand.com'
-      API_VERSION = 'v1'
-
       autoload :Cluster, 'fog/storage/storm_on_demand/models/cluster'
       autoload :Clusters, 'fog/storage/storm_on_demand/models/clusters'
       autoload :Volume, 'fog/storage/storm_on_demand/models/volume'

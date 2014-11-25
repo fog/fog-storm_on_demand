@@ -1,9 +1,6 @@
 module Fog
   module DNS
     class StormOnDemand < Fog::Service
-      API_URL = 'https://api.stormondemand.com'
-      API_VERSION = 'v1'
-
       autoload :Domain, 'fog/dns/storm_on_demand/models/domain'
       autoload :Domains, 'fog/dns/storm_on_demand/models/domains'
       autoload :Record, 'fog/dns/storm_on_demand/models/record'
