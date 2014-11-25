@@ -4,7 +4,7 @@ module Fog
       class Balancers < Fog::Collection
         model Fog::Network::StormOnDemand::Balancer
 
-        def all(options={})
+        def all(options = {})
           data = service.list_balancers(options).body['items']
           load(data)
         end
@@ -24,7 +24,7 @@ module Fog
           new(balancer)
         end
 
-        def possible_nodes(options={})
+        def possible_nodes(options = {})
           service.get_balancer_possible_nodes(options).body['items']
         end
 

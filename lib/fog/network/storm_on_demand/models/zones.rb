@@ -9,7 +9,7 @@ module Fog
           new(z)
         end
 
-        def all(options={})
+        def all(options = {})
           data = service.list_zones(options).body
           load(data)
         end

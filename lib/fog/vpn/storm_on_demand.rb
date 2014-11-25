@@ -32,7 +32,7 @@ module Fog
           end
         end
 
-        def initialize(options={})
+        def initialize(options = {})
           @storm_on_demand_username = options[:storm_on_demand_username]
         end
 

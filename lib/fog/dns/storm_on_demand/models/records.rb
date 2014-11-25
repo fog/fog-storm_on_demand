@@ -14,7 +14,7 @@ module Fog
           new(rec)
         end
 
-        def all(options={})
+        def all(options = {})
           recs = service.list_records(options).body['items']
           load(recs)
         end

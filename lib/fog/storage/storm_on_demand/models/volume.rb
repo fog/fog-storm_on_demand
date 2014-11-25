@@ -35,7 +35,7 @@ module Fog
                                 :new_size => new_size).body
         end
 
-        def update(options={})
+        def update(options = {})
           requires :identity
           service.update_volume({:uniq_id => identity}.merge!(options))
         end

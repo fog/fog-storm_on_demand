@@ -37,7 +37,7 @@ module Fog
           active == 1
         end
 
-        def reboot(options={})
+        def reboot(options = {})
           requires :identity
           service.reboot_server({:uniq_id => identity}.merge!(options))
           true
@@ -55,14 +55,14 @@ module Fog
           true
         end
 
-        def history(options={})
+        def history(options = {})
           requires :identity
           params = {:uniq_id => identity}.merge!(options)
           res = service.server_history(params).body
           res['items']
         end
 
-        def shutdown(options={})
+        def shutdown(options = {})
           requires :identity
           service.shutdown_server({:uniq_id => identity}.merge!(options)).body
         end
