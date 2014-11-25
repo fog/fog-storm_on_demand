@@ -27,10 +27,6 @@ module Fog
 
         attr_writer :password
 
-        def initialize(attributes={})
-          super
-        end
-
         def destroy
           requires :identity
           service.delete_server(:uniq_id => identity)

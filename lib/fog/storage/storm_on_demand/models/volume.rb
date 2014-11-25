@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Storage
     class StormOnDemand
@@ -12,10 +10,6 @@ module Fog
         attribute :size
         attribute :status
         attribute :zone
-
-        def initialize(attributes={})
-          super
-        end
 
         def attach_to(server_id)
           requires :identity

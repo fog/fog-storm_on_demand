@@ -1,5 +1,3 @@
-require "fog/core/model"
-
 module Fog
   module Network
     class StormOnDemand
@@ -10,10 +8,6 @@ module Fog
         attribute :region
         attribute :status
         attribute :valid_source_hvs
-
-        def initialize(attributes={})
-          super
-        end
 
         def set_default
           requires :identity

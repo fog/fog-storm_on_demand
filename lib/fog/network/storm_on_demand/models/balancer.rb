@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Network
     class StormOnDemand
@@ -16,10 +14,6 @@ module Fog
         attribute :ssl_termination
         attribute :strategy
         attribute :vip
-
-        def initialize(attributes={})
-          super
-        end
 
         def add_node(options)
           requires :identity

@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Storage
     class StormOnDemand
@@ -7,10 +5,6 @@ module Fog
         identity :id
         attribute :description
         attribute :zone
-
-        def initialize(attributes={})
-          super
-        end
       end
     end
   end

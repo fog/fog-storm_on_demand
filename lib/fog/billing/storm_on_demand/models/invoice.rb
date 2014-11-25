@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Billing
     class StormOnDemand
@@ -15,10 +13,6 @@ module Fog
         attribute :status
         attribute :total
         attribute :type
-
-        def initialize(attributes={})
-          super
-        end
       end
     end
   end

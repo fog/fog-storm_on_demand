@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Network
     class StormOnDemand
@@ -9,10 +7,6 @@ module Fog
         attribute :assignments
         attribute :id
         attribute :zone_id
-
-        def initialize(attributes={})
-          super
-        end
 
         def destroy
           requires :identity

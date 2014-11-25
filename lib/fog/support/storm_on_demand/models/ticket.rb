@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Support
     class StormOnDemand
@@ -17,10 +15,6 @@ module Fog
         attribute :status
         attribute :subject
         attribute :type
-
-        def initialize(attributes={})
-          super
-        end
 
         def add_feedback(options)
           requires :identity

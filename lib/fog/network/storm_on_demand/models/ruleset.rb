@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Network
     class StormOnDemand
@@ -9,10 +7,6 @@ module Fog
         attribute :rules
         attribute :ruleset
         attribute :uniq_id
-
-        def initialize(attributes={})
-          super
-        end
 
         def update(rules)
           requires :ruleset

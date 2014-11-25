@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Compute
     class StormOnDemand
@@ -16,10 +14,6 @@ module Fog
         attribute :system
         attribute :system_identifier
         attribute :uniq_id
-
-        def initialize(attributes={})
-          super
-        end
 
         def resolve
           requires :identity

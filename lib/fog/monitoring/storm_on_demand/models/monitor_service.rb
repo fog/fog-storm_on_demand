@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Monitoring
     class StormOnDemand
@@ -9,10 +7,6 @@ module Fog
         attribute :services
         attribute :uniq_id
         attribute :unmonitored
-
-        def initialize(attributes={})
-          super
-        end
       end
     end
   end

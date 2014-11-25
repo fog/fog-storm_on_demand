@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Monitoring
     class StormOnDemand
@@ -10,10 +8,6 @@ module Fog
         attribute :memory
         attribute :proc
         attribute :uptime
-
-        def initialize(attributes={})
-          super
-        end
       end
     end
   end

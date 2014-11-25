@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Compute
     class StormOnDemand
@@ -27,10 +25,6 @@ module Fog
         attribute :price
         attribute :vcpu
         attribute :zone_availability
-
-        def initialize(attributes={})
-          super
-        end
       end
     end
   end

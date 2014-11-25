@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Compute
     class StormOnDemand
@@ -17,10 +15,6 @@ module Fog
         attribute :prices
         attribute :related_product
         attribute :series
-
-        def initialize(attributes={})
-          super
-        end
 
         def price(options)
           requires :identity

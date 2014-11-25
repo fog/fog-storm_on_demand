@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Compute
     class StormOnDemand
@@ -11,10 +9,6 @@ module Fog
         attribute :manage_level
         attribute :os
         attribute :zone_availability
-      end
-
-      def initialize(attributes={})
-        super
       end
 
       def restore(options)

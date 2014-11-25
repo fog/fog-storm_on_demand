@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module DNS
     class StormOnDemand
@@ -13,10 +11,6 @@ module Fog
         attribute :notified_serial
         attribute :region_support
         attribute :type
-
-        def initialize(attributes={})
-          super
-        end
 
         def delegation
           requires :identity

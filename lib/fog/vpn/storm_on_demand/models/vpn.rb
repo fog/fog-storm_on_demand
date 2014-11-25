@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module VPN
     class StormOnDemand
@@ -13,10 +11,6 @@ module Fog
         attribute :network_range
         attribute :region_id
         attribute :vpn
-
-        def initialize(attributes={})
-          super
-        end
 
         def update(options={})
           requires :identity

@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module DNS
     class StormOnDemand
@@ -15,10 +13,6 @@ module Fog
         attribute :renewal_status
         attribute :tech_handle
         attribute :updated
-
-        def initialize(attributes={})
-          super
-        end
 
         def renew(years)
           requires :identity

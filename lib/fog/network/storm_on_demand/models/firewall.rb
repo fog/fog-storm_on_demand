@@ -1,5 +1,3 @@
-require 'fog/core/model'
-
 module Fog
   module Network
     class StormOnDemand
@@ -8,10 +6,6 @@ module Fog
         attribute :rules
         attribute :ruleset
         attribute :type
-
-        def initialize(attributes={})
-          super
-        end
       end
     end
   end
