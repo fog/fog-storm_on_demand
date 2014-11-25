@@ -2,7 +2,7 @@ class StormOnDemand < Fog::Bin
   class << self
     def class_for(key)
       case key
-      when :compute
+      when :storm_on_demand
         Fog::Compute::StormOnDemand
       else
         raise ArgumentError, "Unsupported #{self} service: #{key}"
@@ -12,7 +12,7 @@ class StormOnDemand < Fog::Bin
     def [](service)
       @@connections ||= Hash.new do |hash, key|
         hash[key] = case key
-        when :compute
+        when :storm_on_demand
           Fog::Logger.warning("StormOnDemand[:compute] is not recommended, use Compute[:stormondemand] for portability")
           Fog::Compute.new(:provider => 'StormOnDemand')
         else
