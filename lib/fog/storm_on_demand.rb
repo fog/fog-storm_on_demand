@@ -8,15 +8,15 @@ module Fog
 
     extend Fog::Provider
 
-    service(:storm_on_demand, 'Compute')
-    service(:storm_on_demand, 'Network')
-    service(:storm_on_demand, 'Storage')
-    service(:storm_on_demand, 'DNS')
-    service(:storm_on_demand, 'Billing')
-    service(:storm_on_demand, 'Monitoring')
-    service(:storm_on_demand, 'Support')
+    service(:compute, 'Compute')
+    service(:network, 'Network')
+    service(:storage, 'Storage')
+    service(:dns, 'DNS')
+    service(:billing, 'Billing')
+    service(:monitoring, 'Monitoring')
+    service(:support, 'Support')
     service(:models, 'Account')
-    service(:storm_on_demand, 'VPN')
+    service(:vpn, 'VPN')
   end
 
   module Account
