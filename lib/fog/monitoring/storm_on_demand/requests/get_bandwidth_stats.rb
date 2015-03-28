@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_bandwidth_stats(options = {})
           request(
-            :path => '/Monitoring/Bandwidth/stats',
+            :path => "/Monitoring/Bandwidth/stats",
             :body => Fog::JSON.encode(:params => options)
           )
         end

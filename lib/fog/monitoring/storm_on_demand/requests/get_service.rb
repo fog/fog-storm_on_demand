@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_service(options = {})
           request(
-            :path => '/Monitoring/Services/get',
+            :path => "/Monitoring/Services/get",
             :body => Fog::JSON.encode(:params => options)
           )
         end

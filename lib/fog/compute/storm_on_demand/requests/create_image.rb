@@ -4,7 +4,7 @@ module Fog
       class Real
         def create_image(options = {})
           request(
-            :path => '/Storm/Image/create',
+            :path => "/Storm/Image/create",
             :body => Fog::JSON.encode(:params => options)
           )
         end

@@ -4,7 +4,7 @@ module Fog
       class Real
         def create_record_region(options = {})
           request(
-            :path => '/Network/DNS/Record/Region/create',
+            :path => "/Network/DNS/Record/Region/create",
             :body => Fog::JSON.encode(:params => options)
           )
         end

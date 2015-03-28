@@ -4,7 +4,7 @@ module Fog
       class Real
         def attach_volume_to_server(options = {})
           request(
-            :path => '/Storage/Block/Volume/attach',
+            :path => "/Storage/Block/Volume/attach",
             :body => Fog::JSON.encode(:params => options)
           )
         end

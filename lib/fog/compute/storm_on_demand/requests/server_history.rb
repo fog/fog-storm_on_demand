@@ -4,7 +4,7 @@ module Fog
       class Real
         def server_history(options = {})
           request(
-            :path => '/Storm/Server/history',
+            :path => "/Storm/Server/history",
             :body => Fog::JSON.encode(:params => options)
           )
         end

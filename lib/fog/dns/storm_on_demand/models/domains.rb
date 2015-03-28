@@ -5,7 +5,7 @@ module Fog
         model Fog::DNS::StormOnDemand::Domain
 
         def all(options = {})
-          domains = service.list_domains(options).body['items']
+          domains = service.list_domains(options).body["items"]
           load(domains)
         end
       end

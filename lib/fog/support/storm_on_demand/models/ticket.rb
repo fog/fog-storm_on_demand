@@ -19,7 +19,7 @@ module Fog
         def add_feedback(options)
           requires :identity
           res = service.add_feedback({:id => identity}.merge!(options)).body
-          res['feedback'].to_i == 1 ? true : false
+          res["feedback"].to_i == 1 ? true : false
         end
 
         def add_transaction_feedback(options)
@@ -41,14 +41,14 @@ module Fog
           requires :identity
           requires :secid
           res = service.close_ticket(:id => identity, :secid => secid).body
-          res['closed'].to_i == 1 ? true : false
+          res["closed"].to_i == 1 ? true : false
         end
 
         def reopen
           requires :identity
           requires :secid
           res = service.reopen_ticket(:id => identity, :secid => secid).body
-          res['reopened'].to_i == 1 ? true : false
+          res["reopened"].to_i == 1 ? true : false
         end
 
         def reply(options)
@@ -56,7 +56,7 @@ module Fog
           requires :secid
           res = service.reply_ticket({:id => identity,
                                       :secid => secid}.merge!(options)).body
-          res['reply'].to_i == 1 ? true : false
+          res["reply"].to_i == 1 ? true : false
         end
       end
     end

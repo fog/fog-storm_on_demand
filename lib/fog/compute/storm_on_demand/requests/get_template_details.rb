@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_template_details(options = {})
           request(
-            :path => '/Storm/Template/details',
+            :path => "/Storm/Template/details",
             :body => Fog::JSON.encode(:params => options)
           )
         end

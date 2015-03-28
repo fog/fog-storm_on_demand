@@ -4,7 +4,7 @@ module Fog
       class Real
         def update_vpn(options = {})
           request(
-            :path => '/VPN/update',
+            :path => "/VPN/update",
             :body => Fog::JSON.encode(:params => options)
           )
         end

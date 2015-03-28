@@ -4,7 +4,7 @@ module Fog
       class Real
         def update_service(options = {})
           request(
-            :path => '/Monitoring/Services/update',
+            :path => "/Monitoring/Services/update",
             :body => Fog::JSON.encode(:params => options)
           )
         end

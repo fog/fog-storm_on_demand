@@ -4,7 +4,7 @@ module Fog
       class Real
         def check_zone_delegation(options = {})
           request(
-            :path => '/Network/DNS/Zone/delegation',
+            :path => "/Network/DNS/Zone/delegation",
             :body => Fog::JSON.encode(:params => options)
           )
         end

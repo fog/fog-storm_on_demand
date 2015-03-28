@@ -14,12 +14,12 @@ module Fog
         end
 
         def all(options = {})
-          tickets = service.list_tickets(options).body['items']
+          tickets = service.list_tickets(options).body["items"]
           load(tickets)
         end
 
         def types
-          service.list_ticket_types.body['types']
+          service.list_ticket_types.body["types"]
         end
       end
     end

@@ -14,7 +14,7 @@ class StormOnDemand < Fog::Bin
         hash[key] = case key
         when :storm_on_demand
           Fog::Logger.warning("StormOnDemand[:compute] is not recommended, use Compute[:stormondemand] for portability")
-          Fog::Compute.new(:provider => 'StormOnDemand')
+          Fog::Compute.new(:provider => "StormOnDemand")
         else
           raise ArgumentError, "Unrecognized service: #{key.inspect}"
         end

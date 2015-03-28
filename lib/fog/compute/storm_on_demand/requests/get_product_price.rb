@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_product_price(options = {})
           request(
-            :path => '/Product/price',
+            :path => "/Product/price",
             :body => Fog::JSON.encode(:params => options)
           )
         end

@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_config_details(options = {})
           request(
-            :path => '/Storm/Config/details',
+            :path => "/Storm/Config/details",
             :body => Fog::JSON.encode({ :params => options })
           )
         end

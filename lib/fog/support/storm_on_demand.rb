@@ -1,21 +1,21 @@
 module Fog
   module Support
     class StormOnDemand < Fog::Service
-      autoload :Alert, 'fog/support/storm_on_demand/models/alert'
-      autoload :Alerts, 'fog/support/storm_on_demand/models/alerts'
-      autoload :Ticket, 'fog/support/storm_on_demand/models/ticket'
-      autoload :Tickets, 'fog/support/storm_on_demand/models/tickets'
+      autoload :Alert, File.expand_path("../support/storm_on_demand/models/alert", __FILE__)
+      autoload :Alerts, File.expand_path("../support/storm_on_demand/models/alerts", __FILE__)
+      autoload :Ticket, File.expand_path("../support/storm_on_demand/models/ticket", __FILE__)
+      autoload :Tickets, File.expand_path("../support/storm_on_demand/models/tickets", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/support/storm_on_demand/models'
+      model_path "fog/support/storm_on_demand/models"
       model       :alert
       collection  :alerts
       model       :ticket
       collection  :tickets
 
-      request_path 'fog/support/storm_on_demand/requests'
+      request_path "fog/support/storm_on_demand/requests"
       request :get_active_alert
       request :add_feedback
       request :add_transaction_feedback

@@ -15,7 +15,7 @@ module Fog
         end
 
         def all(options = {})
-          recs = service.list_records(options).body['items']
+          recs = service.list_records(options).body["items"]
           load(recs)
         end
       end

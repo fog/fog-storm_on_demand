@@ -4,7 +4,7 @@ module Fog
       class Real
         def list_rulesets(options = {})
           request(
-            :path => '/Network/Firewall/Ruleset/list',
+            :path => "/Network/Firewall/Ruleset/list",
             :body => Fog::JSON.encode(:params => options)
           )
         end

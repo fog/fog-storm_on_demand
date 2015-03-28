@@ -4,7 +4,7 @@ module Fog
       class Real
         def authenticate(options = {})
           request(
-            :path => '/Support/Ticket/authenticate',
+            :path => "/Support/Ticket/authenticate",
             :body => Fog::JSON.encode(:params => options)
           )
         end

@@ -4,7 +4,7 @@ module Fog
       class Real
         def list_zones(options = {})
           request(
-            :path => '/Network/Zone/list',
+            :path => "/Network/Zone/list",
             :body => Fog::JSON.encode(:params => options)
           )
         end

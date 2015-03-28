@@ -4,7 +4,7 @@ module Fog
       class Real
         def server_status(options = {})
           request(
-            :path => '/Storm/Server/status',
+            :path => "/Storm/Server/status",
             :body => Fog::JSON.encode(:params => options)
           )
         end

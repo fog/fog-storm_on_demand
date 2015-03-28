@@ -15,7 +15,7 @@ module Fog
         end
 
         def all_users(options = {})
-          service.list_vpn_users(options).body['items']
+          service.list_vpn_users(options).body["items"]
         end
       end
     end

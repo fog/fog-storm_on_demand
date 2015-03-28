@@ -4,7 +4,7 @@ module Fog
       class Real
         def expire_token(options = {})
           request(
-            :path => '/Account/Auth/expireToken',
+            :path => "/Account/Auth/expireToken",
             :body => Fog::JSON.encode(:params => options)
           )
         end

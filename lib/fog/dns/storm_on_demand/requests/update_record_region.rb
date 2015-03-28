@@ -4,7 +4,7 @@ module Fog
       class Real
         def update_record_region(options = {})
           request(
-            :path => '/Network/DNS/Record/Region/update',
+            :path => "/Network/DNS/Record/Region/update",
             :body => Fog::JSON.encode(:params => options)
           )
         end

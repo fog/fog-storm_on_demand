@@ -5,12 +5,12 @@ module Fog
         model Fog::Compute::StormOnDemand::Notification
 
         def all(options = {})
-          data = service.list_notifications(options).body['items']
+          data = service.list_notifications(options).body["items"]
           load(data)
         end
 
         def current(options = {})
-          data = service.current_notifications(options).body['items']
+          data = service.current_notifications(options).body["items"]
           load(data)
         end
 

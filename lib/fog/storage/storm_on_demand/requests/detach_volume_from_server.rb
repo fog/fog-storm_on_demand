@@ -4,7 +4,7 @@ module Fog
       class Real
         def detach_volume_from_server(options = {})
           request(
-            :path => '/Storage/Block/Volume/detach',
+            :path => "/Storage/Block/Volume/detach",
             :body => Fog::JSON.encode(:params => options)
           )
         end

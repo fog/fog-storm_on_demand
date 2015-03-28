@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_firewall_basic_options(options = {})
           request(
-            :path => '/Network/Firewall/getBasicOptions',
+            :path => "/Network/Firewall/getBasicOptions",
             :body => Fog::JSON.encode(:params => options)
           )
         end

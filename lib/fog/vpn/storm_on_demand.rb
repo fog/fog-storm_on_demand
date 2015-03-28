@@ -1,17 +1,17 @@
 module Fog
   module VPN
     class StormOnDemand < Fog::Service
-      autoload :Vpn, 'fog/vpn/storm_on_demand/models/vpn'
-      autoload :Vpns, 'fog/vpn/storm_on_demand/models/vpns'
+      autoload :Vpn, File.expand_path("../vpn/storm_on_demand/models/vpn", __FILE__)
+      autoload :Vpns, File.expand_path("../vpn/storm_on_demand/models/vpns", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/vpn/storm_on_demand/models'
+      model_path "fog/vpn/storm_on_demand/models"
       model       :storm_on_demand
       collection  :vpns
 
-      request_path 'fog/vpn/storm_on_demand/requests'
+      request_path "fog/vpn/storm_on_demand/requests"
       request :create_vpn
       request :get_vpn
       request :list_vpn_users

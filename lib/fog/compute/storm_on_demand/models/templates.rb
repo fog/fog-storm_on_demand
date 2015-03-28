@@ -5,7 +5,7 @@ module Fog
         model Fog::Compute::StormOnDemand::Template
 
         def all(options = {})
-          data = service.list_templates(options).body['items']
+          data = service.list_templates(options).body["items"]
           load(data)
         end
 

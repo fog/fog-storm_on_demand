@@ -1,4 +1,4 @@
-require 'fog/compute/models/server'
+require "fog/compute/models/server"
 
 module Fog
   module Compute
@@ -59,7 +59,7 @@ module Fog
           requires :identity
           params = {:uniq_id => identity}.merge!(options)
           res = service.server_history(params).body
-          res['items']
+          res["items"]
         end
 
         def shutdown(options = {})

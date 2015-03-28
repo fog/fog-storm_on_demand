@@ -4,7 +4,7 @@ module Fog
       class Real
         def delete_record(options = {})
           request(
-            :path => '/Network/DNS/Record/delete',
+            :path => "/Network/DNS/Record/delete",
             :body => Fog::JSON.encode(:params => options)
           )
         end

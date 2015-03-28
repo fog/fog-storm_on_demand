@@ -1,23 +1,23 @@
 module Fog
   module Compute
     class StormOnDemand < Fog::Service
-      autoload :Config, 'fog/compute/storm_on_demand/models/config'
-      autoload :Configs, 'fog/compute/storm_on_demand/models/configs'
-      autoload :Image, 'fog/compute/storm_on_demand/models/image'
-      autoload :Images, 'fog/compute/storm_on_demand/models/images'
-      autoload :Notification, 'fog/compute/storm_on_demand/models/notification'
-      autoload :Notifications, 'fog/compute/storm_on_demand/models/notifications'
-      autoload :Product, 'fog/compute/storm_on_demand/models/product'
-      autoload :Products, 'fog/compute/storm_on_demand/models/products'
-      autoload :Server, 'fog/compute/storm_on_demand/models/server'
-      autoload :Servers, 'fog/compute/storm_on_demand/models/servers'
-      autoload :Template, 'fog/compute/storm_on_demand/models/template'
-      autoload :Templates, 'fog/compute/storm_on_demand/models/templates'
+      autoload :Config, File.expand_path("../compute/storm_on_demand/models/config", __FILE__)
+      autoload :Configs, File.expand_path("../compute/storm_on_demand/models/configs", __FILE__)
+      autoload :Image, File.expand_path("../compute/storm_on_demand/models/image", __FILE__)
+      autoload :Images, File.expand_path("../compute/storm_on_demand/models/images", __FILE__)
+      autoload :Notification, File.expand_path("../compute/storm_on_demand/models/notification", __FILE__)
+      autoload :Notifications, File.expand_path("../compute/storm_on_demand/models/notifications", __FILE__)
+      autoload :Product, File.expand_path("../compute/storm_on_demand/models/product", __FILE__)
+      autoload :Products, File.expand_path("../compute/storm_on_demand/models/products", __FILE__)
+      autoload :Server, File.expand_path("../compute/storm_on_demand/models/server", __FILE__)
+      autoload :Servers, File.expand_path("../compute/storm_on_demand/models/servers", __FILE__)
+      autoload :Template, File.expand_path("../compute/storm_on_demand/models/template", __FILE__)
+      autoload :Templates, File.expand_path("../compute/storm_on_demand/models/templates", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/compute/storm_on_demand/models'
+      model_path "fog/compute/storm_on_demand/models"
       model       :config
       collection  :configs
       model       :image
@@ -31,7 +31,7 @@ module Fog
       model       :notification
       collection  :notifications
 
-      request_path 'fog/compute/storm_on_demand/requests'
+      request_path "fog/compute/storm_on_demand/requests"
       request :clone_server
       request :delete_server
       request :reboot_server

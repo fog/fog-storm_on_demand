@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_product_code(options = {})
           request(
-            :path => '/Product/getProductCodeFromPath',
+            :path => "/Product/getProductCodeFromPath",
             :body => Fog::JSON.encode(:params => options)
           )
         end
