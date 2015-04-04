@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_balancer_strategies(options = {})
           request(
-            :path => '/Network/LoadBalancer/strategies',
+            :path => "/Network/LoadBalancer/strategies",
             :body => Fog::JSON.encode(:params => options)
           )
         end

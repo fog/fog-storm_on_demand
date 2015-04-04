@@ -23,7 +23,7 @@ module Fog
 
         def starting_price
           requires :identity
-          service.get_product_starting_price(:code => identity).body['items']
+          service.get_product_starting_price(:code => identity).body["items"]
         end
       end
     end

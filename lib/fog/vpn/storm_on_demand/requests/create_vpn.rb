@@ -4,7 +4,7 @@ module Fog
       class Real
         def create_vpn(options = {})
           request(
-            :path => '/VPN/create',
+            :path => "/VPN/create",
             :body => Fog::JSON.encode(:params => options)
           )
         end

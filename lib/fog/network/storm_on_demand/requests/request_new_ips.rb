@@ -4,7 +4,7 @@ module Fog
       class Real
         def request_new_ips(options = {})
           request(
-            :path => '/Network/IP/request',
+            :path => "/Network/IP/request",
             :body => Fog::JSON.encode(:params => options)
           )
         end

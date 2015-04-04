@@ -4,7 +4,7 @@ module Fog
       class Real
         def attach_server_to_private_ip(options = {})
           request(
-            :path => '/Network/Private/attach',
+            :path => "/Network/Private/attach",
             :body => Fog::JSON.encode(:params => options)
           )
         end

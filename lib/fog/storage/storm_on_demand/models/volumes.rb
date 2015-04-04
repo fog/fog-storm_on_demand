@@ -15,7 +15,7 @@ module Fog
         end
 
         def all(options = {})
-          vols = service.list_volumes(options).body['items']
+          vols = service.list_volumes(options).body["items"]
           load(vols)
         end
       end

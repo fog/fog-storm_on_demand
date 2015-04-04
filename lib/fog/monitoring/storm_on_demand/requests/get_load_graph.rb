@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_load_graph(options = {})
           request(
-            :path => '/Monitoring/Load/graph',
+            :path => "/Monitoring/Load/graph",
             :body => Fog::JSON.encode(:params => options)
           )
         end

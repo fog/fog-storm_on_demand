@@ -4,7 +4,7 @@ module Fog
       class Real
         def list_ticket_types(options = {})
           request(
-            :path => '/Support/Ticket/types',
+            :path => "/Support/Ticket/types",
             :body => Fog::JSON.encode(:params => options)
           )
         end

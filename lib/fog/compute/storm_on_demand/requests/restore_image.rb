@@ -4,7 +4,7 @@ module Fog
       class Real
         def restore_image(options = {})
           request(
-            :path => '/Storm/Image/restore',
+            :path => "/Storm/Image/restore",
             :body => Fog::JSON.encode(params => options)
           )
         end

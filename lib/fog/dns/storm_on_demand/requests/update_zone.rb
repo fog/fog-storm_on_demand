@@ -4,7 +4,7 @@ module Fog
       class Real
         def update_zone(options = {})
           request(
-            :path => '/Network/DNS/Zone/update',
+            :path => "/Network/DNS/Zone/update",
             :body => Fog::JSON.encode(:params => options)
           )
         end

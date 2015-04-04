@@ -4,7 +4,7 @@ module Fog
       class Real
         def current_notifications(options = {})
           request(
-            :path => '/Notifications/current',
+            :path => "/Notifications/current",
             :body => Fog::JSON.encode(:params => options)
           )
         end

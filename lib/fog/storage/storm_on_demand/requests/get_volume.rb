@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_volume(options = {})
           request(
-            :path => '/Storage/Block/Volume/details',
+            :path => "/Storage/Block/Volume/details",
             :body => Fog::JSON.encode(:params => options)
           )
         end

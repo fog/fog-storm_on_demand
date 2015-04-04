@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_active_alert(options = {})
           request(
-            :path => '/Support/Alert/getActive',
+            :path => "/Support/Alert/getActive",
             :body => Fog::JSON.encode(:params => options)
           )
         end

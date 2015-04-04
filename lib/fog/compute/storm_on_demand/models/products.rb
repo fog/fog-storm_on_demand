@@ -14,7 +14,7 @@ module Fog
         end
 
         def all(options = {})
-          service.list_products(options).body['items']
+          service.list_products(options).body["items"]
         end
       end
     end

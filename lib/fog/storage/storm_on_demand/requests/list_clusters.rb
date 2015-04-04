@@ -4,7 +4,7 @@ module Fog
       class Real
         def list_clusters(options = {})
           request(
-            :path => '/Storage/Block/Cluster/list',
+            :path => "/Storage/Block/Cluster/list",
             :body => Fog::JSON.encode(:params => options)
           )
         end

@@ -1,8 +1,8 @@
 module Fog
   module StormOnDemand
     module Shared
-      API_URL = 'https://api.stormondemand.com'
-      API_VERSION = 'v1'
+      API_URL = "https://api.stormondemand.com"
+      API_VERSION = "v1"
 
       def initialize(options = {})
         uri = URI.parse(options[:storm_on_demand_auth_url] ||= API_URL)
@@ -25,8 +25,8 @@ module Fog
         begin
           response = @connection.request(params.merge!({
             :headers  => {
-              'Content-Type' => 'application/json',
-              'Authorization' => 'Basic ' << Base64.encode64("#{@storm_on_demand_username}:#{@storm_on_demand_password}").chomp
+              "Content-Type" => "application/json",
+              "Authorization" => "Basic " << Base64.encode64("#{@storm_on_demand_username}:#{@storm_on_demand_password}").chomp
             }.merge!(params[:headers] || {}),
             :path     => "#{@path}/#{API_VERSION}#{params[:path]}",
             :expects  => 200,
@@ -43,7 +43,7 @@ module Fog
         unless response.body.empty?
           response.body = Fog::JSON.decode(response.body)
         end
-        if response.body.key?('error_class')
+        if response.body.key?("error_class")
           raise(Fog::Compute::StormOnDemand::Error, response.body.inspect)
         end
         response

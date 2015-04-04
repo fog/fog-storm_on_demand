@@ -6,7 +6,7 @@ module Fog
 
         def make(amount, card_code)
           service.make_payment(:amount => amount,
-                               :card_code => card_code).body['amount']
+                               :card_code => card_code).body["amount"]
         end
       end
     end

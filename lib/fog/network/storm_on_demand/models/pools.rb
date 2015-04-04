@@ -15,7 +15,7 @@ module Fog
         end
 
         def get_assignments(options = {})
-          service.get_assignments(options).body['items']
+          service.get_assignments(options).body["items"]
         end
       end
     end

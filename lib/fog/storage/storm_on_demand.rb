@@ -1,21 +1,21 @@
 module Fog
   module Storage
     class StormOnDemand < Fog::Service
-      autoload :Cluster, 'fog/storage/storm_on_demand/models/cluster'
-      autoload :Clusters, 'fog/storage/storm_on_demand/models/clusters'
-      autoload :Volume, 'fog/storage/storm_on_demand/models/volume'
-      autoload :Volumes, 'fog/storage/storm_on_demand/models/volumes'
+      autoload :Cluster, File.expand_path("../storage/storm_on_demand/models/cluster", __FILE__)
+      autoload :Clusters, File.expand_path("../storage/storm_on_demand/models/clusters", __FILE__)
+      autoload :Volume, File.expand_path("../storage/storm_on_demand/models/volume", __FILE__)
+      autoload :Volumes, File.expand_path("../storage/storm_on_demand/models/volumes", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/storage/storm_on_demand/models'
+      model_path "fog/storage/storm_on_demand/models"
       model       :cluster
       collection  :clusters
       model       :volume
       collection  :volumes
 
-      request_path 'fog/storage/storm_on_demand/requests'
+      request_path "fog/storage/storm_on_demand/requests"
       request :list_clusters
       request :attach_volume_to_server
       request :create_volume

@@ -4,7 +4,7 @@ module Fog
       class Real
         def next_invoice(options = {})
           request(
-            :path => '/Billing/Invoice/next',
+            :path => "/Billing/Invoice/next",
             :body => Fog::JSON.encode(:params => options)
           )
         end

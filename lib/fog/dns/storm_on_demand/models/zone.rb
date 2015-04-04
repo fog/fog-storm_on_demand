@@ -14,12 +14,12 @@ module Fog
 
         def delegation
           requires :identity
-          service.check_zone_delegation(:id => identity).body['delegation']
+          service.check_zone_delegation(:id => identity).body["delegation"]
         end
 
         def destroy
           requires :identity
-          service.delete_zone(:id => identity).body['deleted']
+          service.delete_zone(:id => identity).body["deleted"]
         end
 
         def update(options = {})

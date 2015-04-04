@@ -4,7 +4,7 @@ module Fog
       class Real
         def delete_reverse(options = {})
           request(
-            :path => '/Network/DNS/Reverse/delete',
+            :path => "/Network/DNS/Reverse/delete",
             :body => Fog::JSON.encode(:params => options)
           )
         end

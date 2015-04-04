@@ -10,7 +10,7 @@ module Fog
         end
 
         def monitoring_ips
-          service.monitoring_ips.body['ips']
+          service.monitoring_ips.body["ips"]
         end
 
         def status(uniq_id)

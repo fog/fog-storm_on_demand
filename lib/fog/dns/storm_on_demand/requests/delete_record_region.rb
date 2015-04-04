@@ -4,7 +4,7 @@ module Fog
       class Real
         def delete_record_region(options = {})
           request(
-            :path => '/Network/DNS/Record/Region/delete',
+            :path => "/Network/DNS/Record/Region/delete",
             :body => Fog::JSON.encode(:params => options)
           )
         end

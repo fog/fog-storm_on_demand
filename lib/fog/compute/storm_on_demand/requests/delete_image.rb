@@ -4,7 +4,7 @@ module Fog
       class Real
         def delete_image(options = {})
           request(
-            :path => '/Storm/Image/delete',
+            :path => "/Storm/Image/delete",
             :body => Fog::JSON.encode(:params => options)
           )
         end

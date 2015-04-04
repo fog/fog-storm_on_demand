@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_image_details(options = {})
           request(
-            :path => '/Storm/Image/details',
+            :path => "/Storm/Image/details",
             :body => Fog::JSON.encode(:params => options)
           )
         end

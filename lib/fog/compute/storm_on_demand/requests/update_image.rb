@@ -4,7 +4,7 @@ module Fog
       class Real
         def update_image(options = {})
           request(
-            :path => '/Storm/Image/update',
+            :path => "/Storm/Image/update",
             :body => Fog::JSON.encode(:params => options)
           )
         end

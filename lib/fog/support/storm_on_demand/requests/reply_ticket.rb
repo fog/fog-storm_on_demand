@@ -4,7 +4,7 @@ module Fog
       class Real
         def reply_ticket(options = {})
           request(
-            :path => '/Support/Ticket/reply',
+            :path => "/Support/Ticket/reply",
             :body => Fog::JSON.encode(:params => options)
           )
         end

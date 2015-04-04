@@ -4,7 +4,7 @@ module Fog
       class Real
         def update_balancer(options = {})
           request(
-            :path => '/Network/LoadBalancer/update',
+            :path => "/Network/LoadBalancer/update",
             :body => Fog::JSON.encode(:params => options)
           )
         end

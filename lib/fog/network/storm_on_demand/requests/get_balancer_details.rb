@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_balancer_details(options = {})
           request(
-            :path => '/Network/LoadBalancer/details',
+            :path => "/Network/LoadBalancer/details",
             :body => Fog::JSON.encode(:params => options)
           )
         end

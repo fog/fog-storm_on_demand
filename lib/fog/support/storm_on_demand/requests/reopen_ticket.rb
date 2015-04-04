@@ -4,7 +4,7 @@ module Fog
       class Real
         def reopen_ticket(options = {})
           request(
-            :path => '/Support/Ticket/reopen',
+            :path => "/Support/Ticket/reopen",
             :body => Fog::JSON.encode(:params => options)
           )
         end

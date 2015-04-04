@@ -4,7 +4,7 @@ module Fog
       class Real
         def check_server_attached(options = {})
           request(
-            :path => '/Network/Private/isAttached',
+            :path => "/Network/Private/isAttached",
             :body => Fog::JSON.encode(:params => options)
           )
         end

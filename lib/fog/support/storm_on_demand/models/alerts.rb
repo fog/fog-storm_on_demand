@@ -5,7 +5,7 @@ module Fog
         model Fog::Support::StormOnDemand::Alert
 
         def get_active
-          alert = service.get_active_alert.body['active_alert']
+          alert = service.get_active_alert.body["active_alert"]
           new(alert)
         end
       end

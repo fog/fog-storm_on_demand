@@ -4,7 +4,7 @@ module Fog
       class Real
         def add_feedback(options = {})
           request(
-            :path => '/Support/Ticket/addFeedback',
+            :path => "/Support/Ticket/addFeedback",
             :body => Fog::JSON.encode(:params => options)
           )
         end

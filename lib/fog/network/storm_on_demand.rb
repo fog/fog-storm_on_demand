@@ -1,21 +1,21 @@
 module Fog
   module Network
     class StormOnDemand < Fog::Service
-      autoload :Balancer, 'fog/network/storm_on_demand/models/balancer'
-      autoload :Balancers, 'fog/network/storm_on_demand/models/balancers'
-      autoload :Firewall, 'fog/network/storm_on_demand/models/firewall'
-      autoload :Firewalls, 'fog/network/storm_on_demand/models/firewalls'
-      autoload :NetworkIp, 'fog/network/storm_on_demand/models/network_ip'
-      autoload :NetworkIps, 'fog/network/storm_on_demand/models/network_ips'
-      autoload :Ruleset, 'fog/network/storm_on_demand/models/ruleset'
-      autoload :Rulesets, 'fog/network/storm_on_demand/models/rulesets'
-      autoload :Zone, 'fog/network/storm_on_demand/models/zone'
-      autoload :Zones, 'fog/network/storm_on_demand/models/zones'
+      autoload :Balancer, File.expand_path("../network/storm_on_demand/models/balancer", __FILE__)
+      autoload :Balancers, File.expand_path("../network/storm_on_demand/models/balancers", __FILE__)
+      autoload :Firewall, File.expand_path("../network/storm_on_demand/models/firewall", __FILE__)
+      autoload :Firewalls, File.expand_path("../network/storm_on_demand/models/firewalls", __FILE__)
+      autoload :NetworkIp, File.expand_path("../network/storm_on_demand/models/network_ip", __FILE__)
+      autoload :NetworkIps, File.expand_path("../network/storm_on_demand/models/network_ips", __FILE__)
+      autoload :Ruleset, File.expand_path("../network/storm_on_demand/models/ruleset", __FILE__)
+      autoload :Rulesets, File.expand_path("../network/storm_on_demand/models/rulesets", __FILE__)
+      autoload :Zone, File.expand_path("../network/storm_on_demand/models/zone", __FILE__)
+      autoload :Zones, File.expand_path("../network/storm_on_demand/models/zones", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/network/storm_on_demand/models'
+      model_path "fog/network/storm_on_demand/models"
       model       :balancer
       collection  :balancers
       model       :network_ip
@@ -31,7 +31,7 @@ module Fog
       model       :zone
       collection  :zones
 
-      request_path 'fog/network/storm_on_demand/requests'
+      request_path "fog/network/storm_on_demand/requests"
       request :remove_balancer_node
       request :add_balancer_node
       request :add_balancer_service

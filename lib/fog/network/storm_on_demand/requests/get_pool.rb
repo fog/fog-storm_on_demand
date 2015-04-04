@@ -4,7 +4,7 @@ module Fog
       class Real
         def get_pool(options = {})
           request(
-            :path => '/Network/Pool/details',
+            :path => "/Network/Pool/details",
             :body => Fog::JSON.encode(:params => options)
           )
         end

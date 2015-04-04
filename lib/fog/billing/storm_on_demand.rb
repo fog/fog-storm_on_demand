@@ -1,21 +1,21 @@
 module Fog
   module Billing
     class StormOnDemand < Fog::Service
-      autoload :Invoice, 'fog/billing/storm_on_demand/models/invoice'
-      autoload :Invoices, 'fog/billing/storm_on_demand/models/invoices'
-      autoload :Payment, 'fog/billing/storm_on_demand/models/payment'
-      autoload :Payments, 'fog/billing/storm_on_demand/models/payments'
+      autoload :Invoice, File.expand_path("../billing/storm_on_demand/models/invoice", __FILE__)
+      autoload :Invoices, File.expand_path("../billing/storm_on_demand/models/invoices", __FILE__)
+      autoload :Payment, File.expand_path("../billing/storm_on_demand/models/payment", __FILE__)
+      autoload :Payments, File.expand_path("../billing/storm_on_demand/models/payments", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/billing/storm_on_demand/models'
+      model_path "fog/billing/storm_on_demand/models"
       model      :invoice
       collection :invoices
       model      :payment
       collection :payments
 
-      request_path 'fog/billing/storm_on_demand/requests'
+      request_path "fog/billing/storm_on_demand/requests"
       request :list_invoices
       request :get_invoice
       request :next_invoice

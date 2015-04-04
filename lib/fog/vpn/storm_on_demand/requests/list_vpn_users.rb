@@ -4,7 +4,7 @@ module Fog
       class Real
         def list_vpn_users(options = {})
           request(
-            :path => '/VPN/list',
+            :path => "/VPN/list",
             :body => Fog::JSON.encode(:params => options)
           )
         end

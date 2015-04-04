@@ -4,7 +4,7 @@ module Fog
       class Real
         def resize_volume(options = {})
           request(
-            :path => '/Storage/Block/Volume/resize',
+            :path => "/Storage/Block/Volume/resize",
             :body => Fog::JSON.encode(:params => options)
           )
         end

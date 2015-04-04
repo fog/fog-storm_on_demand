@@ -15,7 +15,7 @@ module Fog
         end
 
         def all(options = {})
-          data = service.list_images(options).body['items']
+          data = service.list_images(options).body["items"]
           load(data)
         end
       end

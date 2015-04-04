@@ -1,17 +1,17 @@
 module Fog
   module Account
     class StormOnDemand < Fog::Service
-      autoload :Token, 'fog/account/storm_on_demand/models/token'
-      autoload :Tokens, 'fog/account/storm_on_demand/models/tokens'
+      autoload :Token, File.expand_path("../account/storm_on_demand/models/token", __FILE__)
+      autoload :Tokens, File.expand_path("../account/storm_on_demand/models/tokens", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/account/storm_on_demand/models'
+      model_path "fog/account/storm_on_demand/models"
       model      :token
       collection :tokens
 
-      request_path 'fog/account/storm_on_demand/requests'
+      request_path "fog/account/storm_on_demand/requests"
       request :create_token
       request :expire_token
 

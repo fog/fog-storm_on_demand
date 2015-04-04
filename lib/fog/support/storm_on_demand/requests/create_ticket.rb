@@ -4,7 +4,7 @@ module Fog
       class Real
         def create_ticket(options = {})
           request(
-            :path => '/Support/Ticket/create',
+            :path => "/Support/Ticket/create",
             :body => Fog::JSON.encode(:params => options)
           )
         end

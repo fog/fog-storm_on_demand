@@ -4,7 +4,7 @@ module Fog
       class Real
         def update_record(options = {})
           request(
-            :path => '/Network/DNS/Record/update',
+            :path => "/Network/DNS/Record/update",
             :body => Fog::JSON.encode(:params => options)
           )
         end

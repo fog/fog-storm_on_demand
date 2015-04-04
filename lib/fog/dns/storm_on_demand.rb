@@ -1,19 +1,19 @@
 module Fog
   module DNS
     class StormOnDemand < Fog::Service
-      autoload :Domain, 'fog/dns/storm_on_demand/models/domain'
-      autoload :Domains, 'fog/dns/storm_on_demand/models/domains'
-      autoload :Record, 'fog/dns/storm_on_demand/models/record'
-      autoload :Records, 'fog/dns/storm_on_demand/models/records'
-      autoload :Reverse, 'fog/dns/storm_on_demand/models/reverse'
-      autoload :Reverses, 'fog/dns/storm_on_demand/models/reverses'
-      autoload :Zone, 'fog/dns/storm_on_demand/models/zone'
-      autoload :Zones, 'fog/dns/storm_on_demand/models/zones'
+      autoload :Domain, File.expand_path("../dns/storm_on_demand/models/domain", __FILE__)
+      autoload :Domains, File.expand_path("../dns/storm_on_demand/models/domains", __FILE__)
+      autoload :Record, File.expand_path("../dns/storm_on_demand/models/record", __FILE__)
+      autoload :Records, File.expand_path("../dns/storm_on_demand/models/records", __FILE__)
+      autoload :Reverse, File.expand_path("../dns/storm_on_demand/models/reverse", __FILE__)
+      autoload :Reverses, File.expand_path("../dns/storm_on_demand/models/reverses", __FILE__)
+      autoload :Zone, File.expand_path("../dns/storm_on_demand/models/zone", __FILE__)
+      autoload :Zones, File.expand_path("../dns/storm_on_demand/models/zones", __FILE__)
 
       requires :storm_on_demand_username, :storm_on_demand_password
       recognizes :storm_on_demand_auth_url
 
-      model_path 'fog/dns/storm_on_demand/models'
+      model_path "fog/dns/storm_on_demand/models"
       model       :domain
       collection  :domains
       model       :record
@@ -23,7 +23,7 @@ module Fog
       model       :zone
       collection  :zones
 
-      request_path 'fog/dns/storm_on_demand/requests'
+      request_path "fog/dns/storm_on_demand/requests"
       request :list_domains
       request :renew_domain
 
